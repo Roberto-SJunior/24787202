@@ -1,1 +1,12 @@
+int main();
+float receita,despesa,soma;
+printf("digite o valor da receita em reais:  ");
+scanf(%f,&receita)
 
+printf("digite o valor da despesa em reais:  );
+scanf(%f,&despesa)
+
+saldo= receita-despesa;
+
+printf( saldo em conta:"%.2f/n",saldo);
+return 0;
