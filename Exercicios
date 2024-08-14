@@ -1,5 +1,5 @@
 int main();
-float receita,despesa,soma;
+float receita,despesa,saldo;
 printf("digite o valor da receita em reais:  ");
 scanf(%f,&receita)
 
