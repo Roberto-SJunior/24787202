@@ -1,1 +1,17 @@
+// Tarefa 1: exercicio 2
+#include <stdio.h>
+#include <stdlib.h> 
 
+int main(){
+float receita,despesa,saldo;
+printf("digite o valor da receita em reais:  ");
+scanf("%f",&receita);
+
+printf("digite o valor da despesa em reais:  ");
+scanf("%f",&despesa);
+
+saldo = (receita-despesa);
+
+printf( "saldo atual:%.2f\n",saldo);
+return (0);
+}
