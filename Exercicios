@@ -1,15 +1,35 @@
+//Tarefa 1 - exercicio 1
 #include <stdio.h>
+#include <stdlib.h> 
+int main()
+{
 
-int main (){
+#include <stdio.h>
+int visitantes;
+scanf ("%d",&visitantes);
+print()
+printf("o numero de visitantes é:%.2d/n",visitantes);
+return(0);
+}
+
+
+
+// Tarefa 1: exercicio 2
+#include <stdio.h>
+#include <stdlib.h> 
+
+int main(){
 float receita,despesa,saldo;
 printf("digite o valor da receita em reais:  ");
-scanf(%f,&receita)
+scanf("%f",&receita);
 
-printf("digite o valor da despesa em reais:  );
-scanf(%f,&despesa)
+printf("digite o valor da despesa em reais:  ");
+scanf("%f",&despesa);
 
-saldo= receita-despesa;
+saldo = (receita-despesa);
 
-printf( saldo atual:"%.2f/n",saldo);
-return 0;
+printf( "saldo atual:%.2f\n",saldo);
+return (0);
 }
+
+
