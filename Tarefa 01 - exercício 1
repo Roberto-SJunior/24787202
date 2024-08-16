@@ -1,1 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h> 
+
+int main()
+{
+int visitantes;
+printf("digite o número de visitantes: ");
+scanf ("%d",&visitantes);
+printf("confirmados %.2d\n visitantes");
+return(0);
+}
 
