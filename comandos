@@ -1,0 +1,9 @@
+div// quociente da divisão A por B.
+mod// resto da divisão inteira.
+pow// exponenciação, ex: potencia = pow(x,2); (necessita da biblioteca math.h).
+=!// diferente.
+printf// implantar. 
+scanf// analise de dado.
+if// condição, ex: if(Soma > 10).
+else// se a primeira condição não for atendida.
+
