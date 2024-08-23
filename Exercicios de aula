@@ -1,4 +1,4 @@
-//Tarefa 1 - exercicio 1
+//1) afirmador de visitantes
 #include <stdio.h>
 #include <stdlib.h> 
 int main()
@@ -11,8 +11,8 @@ print()
 printf("o numero de visitantes é:%.2d/n",visitantes);
 return(0);
 }
-
-
+______________________________________________________
+//2) Consulta de saldo
 
 // Tarefa 1: exercicio 2
 #include <stdio.h>
@@ -30,6 +30,32 @@ saldo = (receita-despesa);
 
 printf( "saldo atual:%.2f\n",saldo);
 return (0);
+}
+____________________________________
+//3) Consulta de aprovação por media
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+
+float nota1,nota2,nota3,mediafinal;
+printf("Digite a nota 1: ");
+scanf("%f",&nota1);
+printf("Digite a nota 2: ");
+scanf("%f",&nota2);
+printf("Digite a nota 3: ");
+scanf("%f",&nota3);
+mediafinal=(nota1+nota2+nota3)/3;
+if(mediafinal>=5){
+ printf("Parabens, voce foi aprovado com media %.2f\n",mediafinal);
+}
+else{
+    printf("Voce foi reprovado");
+}
+return(0);
 }
 
 
