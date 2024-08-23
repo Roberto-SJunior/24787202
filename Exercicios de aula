@@ -88,4 +88,36 @@ return(0);
 }
 
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+
+float nota1,nota2,nota3,mediafinal;
+char opcao;
+printf("Digite a nota 1: ");
+scanf("%f",&nota1);
+printf("Digite a nota 2: ");
+scanf("%f",&nota2);
+printf("Digite a nota 3: ");
+scanf("%f",&nota3);
+mediafinal=(nota1+nota2+nota3)/3;
+if(mediafinal>=5){
+ printf("Parabens, voce foi aprovado com media %.2f\n",mediafinal);
+}
+
+printf("Deseja calcular novamente: ");
+scanf("%c",&opcao);
+
+if(opcao=="sim"){
+  goto if;
+}
+
+return(0);
+}
+
+
+
 
