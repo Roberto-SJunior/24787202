@@ -86,6 +86,25 @@ printf("Valor da divisao: %.2f\n",divisao);
 
 return(0);
 }
+__________________________________________________________________
+int main()
+{
+
+float numero1,numero2;
+
+printf("Digite o numero 1: ");
+scanf("%f",&numero1);
+printf("Digite o numero 2: ");
+scanf("%f",&numero2);
+
+printf("valor da soma: %.2f\n",(numero1+numero2));
+printf("Valor da subtracao: %.2f\n",(numero1-numero2));
+printf("Valor da multiplicacao: %.2f\n",(numero1*numero2));
+printf("Valor da divisao: %.2f\n",(numero1/numero2));
+
+return(0);
+}
+__________________________________________________________________
 
 
 #include <stdio.h>
