@@ -57,6 +57,41 @@ else{
 }
 return(0);
 }
+________________________________________________________________________
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+
+float nota1,nota2,nota3,mediafinal;
+char opcao;
+refaz:
+
+printf("Digite a nota 1: ");
+scanf("%f",&nota1);
+printf("Digite a nota 2: ");
+scanf("%f",&nota2);
+printf("Digite a nota 3: ");
+scanf("%f",&nota3);
+mediafinal=(nota1+nota2+nota3)/3;
+if(mediafinal>=5){
+ printf("Parabens, voce foi aprovado com media %.2f\n",mediafinal);
+}
+else{
+printf("Voce foi reprovado com media %.2f\n",mediafinal);
+}
+
+printf("Deseja calcular novamente (s/n): ");
+scanf("%s",&opcao);
+
+if(opcao=='s'){
+  goto refaz;
+}
+
+return(0);
+}
 ________________________________________________________________
 //4) calculadora
 
@@ -67,7 +102,9 @@ ________________________________________________________________
 int main()
 {
 
+char opcao;
 float numero1,numero2,soma,subtracao,divisao,multiplicacao;
+exec:
 
 printf("Digite o numero 1: ");
 scanf("%f",&numero1);
@@ -84,9 +121,17 @@ printf("Valor da subtracao: %.2f\n",subtracao);
 printf("Valor da multiplicacao: %.2f\n",multiplicacao);
 printf("Valor da divisao: %.2f\n",divisao);
 
+printf("Deseja calcular novamente (s,n):");
+scanf("%s",&opcao);
+
+if(opcao=='s'){
+  goto exec;
+}
+
 return(0);
 }
-__________________________________________________________________
+_____________________________________________________________
+
 int main()
 {
 
@@ -105,37 +150,6 @@ printf("Valor da divisao: %.2f\n",(numero1/numero2));
 return(0);
 }
 __________________________________________________________________
-
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
-int main()
-{
-
-float nota1,nota2,nota3,mediafinal;
-char opcao;
-printf("Digite a nota 1: ");
-scanf("%f",&nota1);
-printf("Digite a nota 2: ");
-scanf("%f",&nota2);
-printf("Digite a nota 3: ");
-scanf("%f",&nota3);
-mediafinal=(nota1+nota2+nota3)/3;
-if(mediafinal>=5){
- printf("Parabens, voce foi aprovado com media %.2f\n",mediafinal);
-}
-
-printf("Deseja calcular novamente: ");
-scanf("%c",&opcao);
-
-if(opcao=="sim"){
-  goto if;
-}
-
-return(0);
-}
 
 
 
