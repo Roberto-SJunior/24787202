@@ -151,6 +151,27 @@ return(0);
 }
 __________________________________________________________________
 
+#include <stdio.h>
+#include <stdlib.h>
 
+int main ()
+{
+float faltas;
+int aulas = 60;
+printf("Digite quantidade de faltas:");
+scanf("%f",&faltas);
+
+float porcfaltas = (faltas/60)*100;
+
+if(porcfaltas>=25){
+    printf("Voce foi reprovado com porcentagem %.2f de faltas",porcfaltas);
+}
+else{
+    printf("Voce foi aprovado com porcentagem %.2f de faltas",porcfaltas);
+}
+return(0);
+
+
+}
 
 
