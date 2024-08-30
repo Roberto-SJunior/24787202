@@ -67,6 +67,9 @@ int main()
 
 float nota1,nota2,nota3,mediafinal;
 char opcao;
+float faltas;
+int aulas = 60;
+
 refaz:
 
 printf("Digite a nota 1: ");
@@ -75,13 +78,19 @@ printf("Digite a nota 2: ");
 scanf("%f",&nota2);
 printf("Digite a nota 3: ");
 scanf("%f",&nota3);
+printf("Digite a quantidade de faltas:");
+scanf("%f",&faltas);
+
 mediafinal=(nota1+nota2+nota3)/3;
-if(mediafinal>=5){
- printf("Parabens, voce foi aprovado com media %.2f\n",mediafinal);
+float porcfaltas = (faltas/60)*100;
+
+if(porcfaltas<25.00 && mediafinal>=5){
+    printf("Voce foi aprovado com porcentagem %.2f de faltas e nota %.2f  \n",porcfaltas, mediafinal);
 }
 else{
-printf("Voce foi reprovado com media %.2f\n",mediafinal);
+    printf("Voce foi reprovado com porcentagem %.2f de faltas e nota %.2f \n",porcfaltas,mediafinal);
 }
+
 
 printf("Deseja calcular novamente (s/n): ");
 scanf("%s",&opcao);
@@ -89,8 +98,9 @@ scanf("%s",&opcao);
 if(opcao=='s'){
   goto refaz;
 }
-
 return(0);
+
+
 }
 ________________________________________________________________
 //4) calculadora
@@ -150,28 +160,4 @@ printf("Valor da divisao: %.2f\n",(numero1/numero2));
 return(0);
 }
 __________________________________________________________________
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main ()
-{
-float faltas;
-int aulas = 60;
-printf("Digite a quantidade de faltas:");
-scanf("%f",&faltas);
-
-float porcfaltas = (faltas/60)*100;
-
-if(porcfaltas>=25){
-    printf("Voce foi reprovado com porcentagem %.2f de faltas",porcfaltas);
-}
-else{
-    printf("Voce foi aprovado com porcentagem %.2f de faltas",porcfaltas);
-}
-return(0);
-
-
-}
-
 
