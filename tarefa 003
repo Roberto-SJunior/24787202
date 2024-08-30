@@ -24,12 +24,10 @@ int main ()
 {
 float num1,num2,num3;
 char nome;
-printf("Ola eu sou o Nº1, como é o seu nome? ");
+printf("Ola eu sou o N1, como e o seu nome? ");
 scanf("%s",&nome);
-printf("Digite o segundo numero: ");
-scanf("%f",&num2);
-printf("Digite o terceiro numero: ");
-scanf("%f",&num3);
 
-printf("Numeros em ordem inversa: %.2f %.2f %.2f\n", num3,num2,num1 );
+printf("Bem vindo ao clube: %s\n",nome);
+
 return(0);
+}
