@@ -158,7 +158,7 @@ int main ()
 {
 float faltas;
 int aulas = 60;
-printf("Digite quantidade de faltas:");
+printf("Digite a quantidade de faltas:");
 scanf("%f",&faltas);
 
 float porcfaltas = (faltas/60)*100;
