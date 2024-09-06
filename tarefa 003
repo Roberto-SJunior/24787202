@@ -22,7 +22,6 @@ ________________________________________________________________________
 
 int main ()
 {
-float num1,num2,num3;
 char nome;
 printf("Ola eu sou o N1, como e o seu nome? ");
 scanf("%s",&nome);
@@ -31,3 +30,68 @@ printf("Bem vindo ao clube: %s\n",nome);
 
 return(0);
 }
+__________________________________________________________________________
+//c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+int idade;
+char nome;
+printf("Digite seu nome: ");
+    scanf("%s",&nome);
+
+printf("Qual sua idade: ");
+    scanf("%d",&idade);
+
+int vida = idade*365;
+
+printf("Voce tem %.2d dias de vida \n\n", vida);
+
+return(0);
+}
+______________________________________________________________________________
+//d
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+float raio;
+printf("Qual o raio do circulo: ");
+    scanf("%f",&raio);
+
+float z = pow(raio, 2);
+float area = 3.14*z;
+
+printf("Area do circulo: %.2f \n", area  );
+    scanf("%d",&area);
+
+return(0);
+}
+______________________________________________________________________________________
+//e
+_______________________________________________________________________________________
+//f
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+float temp;
+double graus;
+printf("Escreva a temperatura em farenheit: ");
+    scanf("%f",&temp);
+
+graus = 5/9;
+
+printf("Temperatura em graus centigrados %.3lf \n",graus);
+
+return(0);
+}
+
