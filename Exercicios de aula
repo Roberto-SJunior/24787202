@@ -161,3 +161,54 @@ return(0);
 }
 __________________________________________________________________
 
+Ex 1)
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+
+float nota1,nota2,nota3,mediafinal;
+char opcao;
+float faltas;
+int aulas = 60;
+
+refaz:
+
+printf("Digite a nota do trabalho em laboratorio: ");
+scanf("%f",&nota1);
+printf("Digite a nota da avaliacao bimestral: ");
+scanf("%f",&nota2);
+printf("Digite a nota do exame final: ");
+scanf("%f",&nota3);
+
+mediafinal=(nota1*2+nota2*3+nota3*5)/10;
+
+if(mediafinal>=8 && mediafinal<=10){
+    printf("Conceito A, nota %.2f\n",mediafinal);
+}
+if(mediafinal>=7 && mediafinal<=7.99){
+    printf("Conceito B, nota %.2f\n",mediafinal);
+}
+if(mediafinal>=6 && mediafinal<=6.99){
+    printf("Conceito C, nota %.2f\n",mediafinal);
+}
+if(mediafinal>=5 && mediafinal<=5.99){
+    printf("Conceito D, nota %.2f\n",mediafinal);
+}
+
+else{
+   printf("Conceito E, nota %.2f\n",mediafinal);
+}
+
+printf("Deseja calcular novamente (s/n): ");
+scanf("%s",&opcao);
+
+if(opcao=='s'){
+  goto refaz;
+}
+return(0);
+}
+
