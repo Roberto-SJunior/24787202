@@ -1,9 +1,49 @@
-//A
+//Exercicio 1 - A)
+
+#include <stdio.h>
+
+int main (){
+double n = 4000000000;
+printf("%lf\n",n);
+
+return(0);
+}
+____________________________________________________________________________________
+//b
+
+#include <stdio.h>
+
+int main (){
+int a=5;
+printf("%d\n",a);
+
+return(0);
+}
+_______________________________________________________________________________________
+//c 
+#include <stdio.h>
+
+int main (){
+int a=4;
+int b=2;
+printf("%d e %d\n",a,b);
+
+return(0);
+}
+
+________________________________________________________________________________________
+//d
+
+
+
+
+
+//Exercicio 2 - A
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main ()
-{
+int main (){
 float num1,num2,num3;
 printf("Digite o primeiro numero: ");
 scanf("%f",&num1);
@@ -20,8 +60,7 @@ ________________________________________________________________________
 #include <stdio.h>
 #include <stdlib.h>
 
-int main ()
-{
+int main (){
 char nome;
 printf("Ola eu sou o N1, como e o seu nome? ");
 scanf("%s",&nome);
@@ -35,8 +74,7 @@ __________________________________________________________________________
 #include <stdio.h>
 #include <stdlib.h>
 
-int main ()
-{
+int main (){
 int idade;
 char nome;
 printf("Digite seu nome: ");
@@ -58,8 +96,7 @@ ______________________________________________________________________________
 #include <stdlib.h>
 #include <math.h>
 
-int main ()
-{
+int main (){
 float raio;
 printf("Qual o raio do circulo: ");
     scanf("%f",&raio);
@@ -78,8 +115,7 @@ ________________________________________________________________________________
 #include <stdlib.h>
 #include <math.h>
 
-int main ()
-{
+int main (){
 float altura,largura,latas;
 printf("Digite a altura da parede: ");
     scanf("%f",&altura);
@@ -99,8 +135,7 @@ ________________________________________________________________________________
 #include <stdlib.h>
 #include <math.h>
 
-int main ()
-{
+int main (){
 float fahrenheit,celsius;
 printf("Digite a temperatura em fahrenheit: ");
     scanf("%f",&fahrenheit);
@@ -119,8 +154,7 @@ ________________________________________________________________________________
 #include <stdio.h>
 #include <stdlib.h>
 
-int main ()
-{
+int main (){
 float pressao, volume, temperatura;
 printf("Digite a pressao do pneu: ");
     scanf("%f",&pressao);
@@ -142,8 +176,7 @@ ________________________________________________________________________________
 #include <stdio.h>
 #include <stdlib.h>
 
-int main ()
-{
+int main (){
 float termo1,razao,N;
 printf("Digite o primeiro termo de uma progressao aritmetica: ");
     scanf("%f",&termo1);
@@ -166,8 +199,7 @@ ________________________________________________________________________________
 #include <stdlib.h>
 #include <math.h>
 
-int main ()
-{
+int main (){
 float a,b,c,delta, raiz1, raiz2;
 refaz:
 
@@ -212,8 +244,7 @@ ________________________________________________________________________________
 #include <stdlib.h>
 #include <math.h>
 
-int main ()
-{
+int main (){
 float valor1,valor10,valor50,valor100;
 printf("Digite a quantidade de notas de 1 real: ");
     scanf("%f",&valor1);
@@ -238,8 +269,7 @@ ________________________________________________________________________________
 #include <stdlib.h>
 #include <math.h>
 
-int main ()
-{
+int main (){
 int valort,valor1,valor10,valor50,valor100;
 printf("Digite o valor total em dinheiro: ");
     scanf("%d",&valort);
