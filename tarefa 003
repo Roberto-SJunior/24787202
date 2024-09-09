@@ -74,6 +74,24 @@ return(0);
 }
 ______________________________________________________________________________________
 //e
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+float altura,largura,latas;
+printf("Digite a altura da parede: ");
+    scanf("%f",&altura);
+printf("Digite a largura da parede: ");
+    scanf("%f",&largura);
+    
+latas = (0.3*(altura*largura))/2;
+
+printf("Quantidade de latas necessarias: %.3lf \n",ceil(latas));
+
+return(0);
+}
 _______________________________________________________________________________________
 //f
 
@@ -83,15 +101,170 @@ ________________________________________________________________________________
 
 int main ()
 {
-float temp;
-double graus;
-printf("Escreva a temperatura em farenheit: ");
-    scanf("%f",&temp);
+float fahrenheit,celsius;
+printf("Digite a temperatura em fahrenheit: ");
+    scanf("%f",&fahrenheit);
 
-graus = 5/9;
+celsius = (5.0 / 9.0) * (fahrenheit - 32);
 
-printf("Temperatura em graus centigrados %.3lf \n",graus);
+printf("Temperatura em graus centigrados: %.3lf \n",celsius);
 
 return(0);
 }
+
+____________________________________________________________________________________
+
+//g
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+float pressao, volume, temperatura;
+printf("Digite a pressao do pneu: ");
+    scanf("%f",&pressao);
+printf("Digite o volume do pneu: ");
+    scanf("%f",&volume);
+printf("Escreva a temperatura do pneu: ");
+    scanf("%f",&temperatura);
+
+float massa = (pressao*volume)/(0.37*(temperatura+460));
+
+printf("Massa de ar do pneu: %.3f \n",massa);
+
+return(0);
+}
+
+____________________________________________________________________________________________
+//h
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+float termo1,razao,N;
+printf("Digite o primeiro termo de uma progressao aritmetica: ");
+    scanf("%f",&termo1);
+printf("Escreva a razao de uma progressao aritmetica: ");
+    scanf("%f",&razao);
+printf("Escreva um numero N: ");
+    scanf("%f",&N);
+        
+float an = termo1+(N-1)*razao;
+
+printf("O N-esimo termo da progressao aritmetica é %.3f \n",an);
+
+return(0);
+}
+
+_________________________________________________________________________________________________
+//i
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+float a,b,c,delta, raiz1, raiz2;
+refaz:
+
+printf("Digite o coeficiente A: ");
+    scanf("%f",&a);
+if(a==0){
+    printf("O valor de 'a' deve ser diferente de zero");
+    goto refaz;
+}   
+printf("Digite o coeficiente B: ");
+    scanf("%f",&b);
+printf("Digite o coeficiente C: ");
+    scanf("%f",&c);
+    
+delta = (pow(b,2))-4*a*c;
+
+if(delta<0){
+    printf("A equacao nao possui raizes reais");
+}
+
+else if (delta ==0){
+    raiz1= -b/(2*a);
+    printf("A equacao possui 1 raiz real igual a %.2f \n",raiz1);
+}
+
+else{
+    raiz1= (-b+sqrt(delta))/(2*a);
+    raiz2= (-b-sqrt(delta))/(2*a);
+    
+    printf("A equação possui duas raizes iguais a %.2f e %.2f", raiz1, raiz2);
+}
+
+
+return(0);
+}
+
+
+__________________________________________________________________________________________________
+//j
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+float valor1,valor10,valor50,valor100;
+printf("Digite a quantidade de notas de 1 real: ");
+    scanf("%f",&valor1);
+printf("Digite a quantidade de notas de 10 reais: ");
+    scanf("%f",&valor10);
+printf("Digite a quantidade de notas de 50 reais: ");
+    scanf("%f",&valor50);
+printf("Digite o quantidade de notas de 100 reais: ");
+    scanf("%f",&valor100);
+        
+float valortotal = (valor1*1)+(valor10*10)+(valor50*50)+(valor100*100);
+
+printf("O valor total em dinheiro é %.3f reais \n",valortotal);
+
+return(0);
+}
+
+__________________________________________________________________________________________________
+//L
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+int valort,valor1,valor10,valor50,valor100;
+printf("Digite o valor total em dinheiro: ");
+    scanf("%d",&valort);
+
+valor100 = valort / 100;
+valort = valort % 100;
+
+valor50 = valort / 50;
+valort = valort % 50;
+
+valor10 = valort / 10;
+valort = valort % 10;
+
+valor1 = valort / 1;
+valort = valort % 1;
+
+
+printf("Notas de 100 reais: %d  \n",valor100);
+printf("Notas de 50 reais: %d  \n",valor50);
+printf("Notas de 10 reais: %d  \n",valor10);
+printf("Notas de 1 reais: %d  \n",valor1);
+
+return(0);
+}
+
+
+
 
