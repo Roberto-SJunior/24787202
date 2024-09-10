@@ -33,11 +33,18 @@ return(0);
 
 ________________________________________________________________________________________
 //d
+#include <stdio.h>
 
+int main (){
+float a;
+printf("Digite um numero: ");
+scanf("%f",&a);
 
+printf("voce digitou o numero %.2f\n",a);
 
-
-
+return(0);
+}
+_____________________________________________________________________________________
 //Exercicio 2 - A
 
 #include <stdio.h>
