@@ -68,14 +68,15 @@ ________________________________________________________________________
 #include <stdlib.h>
 
 int main (){
-char nome;
-printf("Ola eu sou o N1, como e o seu nome? ");
+char nome[50];
+printf("Ola eu sou o N1, digite seu nome: ");
 scanf("%s",&nome);
 
 printf("Bem vindo ao clube: %s\n",nome);
 
 return(0);
 }
+
 __________________________________________________________________________
 //c
 #include <stdio.h>
