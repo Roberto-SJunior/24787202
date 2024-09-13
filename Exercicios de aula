@@ -261,4 +261,45 @@ if(n3>n1 && n3>n2){
 
 return(0);
 }
+_____________________________________________________________________
 
+int main()
+{
+
+float A;
+int B;
+
+printf("Digite um valor inicial A: ");
+scanf("%f",&A);
+printf("Digite um valor inicial B: ");
+scanf("%d",&B);
+
+A -= B;
+printf("A=%.1f\n",A);
+A *= 4;
+printf("A=%.1f\n",A);
+A /= 3;
+printf("A=%.1f\n",A);
+A += 2;
+printf("A=%.1f\n",A);
+B %= 5;
+printf("B=%.1d\n",B);
+
+return(0);
+}
+_______________________________________________________________________
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#define pi 3.14;
+
+int main()
+{
+float raio, area;
+
+printf("Digite o raio \n");
+scanf("%f", &raio);
+area = pow(raio,2)*pi;
+printf("Area total do circulo: %.2f\n", area);
+return 0;
+}
