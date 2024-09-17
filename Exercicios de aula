@@ -303,3 +303,48 @@ area = pow(raio,2)*pi;
 printf("Area total do circulo: %.2f\n", area);
 return 0;
 }
+___________________________________________________________________________
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+float num1= 6.25;
+printf("voces verão tudo com erro de acento \n");
+printf("numero 1: %.2f\n",num1);
+
+setlocale(LC_ALL,"Portuguese");
+float num2=6.25;
+
+printf("vocês não verão mais erros de acento \n");
+printf("numero 2: %.2f\n",num2);
+
+
+return(0);
+}
+______________________________________________________________________________________
+#include <stdio.h>
+
+int main(){
+int a=50;
+
+while(a<=50&&a>0){
+    printf("%d\n",a);
+    a--;}
+return(0);
+}
+____________________________________________________________________________________
+#include <stdio.h>
+
+int main(){
+int numero=2,j=1;
+
+while(j<=10){
+    printf("%d x %d = %d\n",numero,j,numero*j);
+    j++;}
+
+return(0);
+}
+
