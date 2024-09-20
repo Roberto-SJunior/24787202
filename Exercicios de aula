@@ -348,3 +348,58 @@ while(j<=10){
 return(0);
 }
 
+_________________________________________________________________________________________
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+setlocale(LC_ALL, "Portuguese");
+int i;
+char opcao;
+refaz:
+
+//MENU
+do {
+printf("Menu de Produtos:\n");
+printf("1. Caneta\n");
+printf("2. Borracha\n");
+printf("3. Apontador\n");
+printf("Escolha uma das opções:");
+scanf("%d", &i);
+
+if(i<1 || i>3){
+printf("Opção invalida!, Escolha uma das opções abaixo!\n\n");
+}}
+while(i<1 || i>3);
+
+switch (i) {
+case 1:
+printf("Produto: Caneta\n");
+printf("Preco: R$ 2.50\n");
+printf("Especificacao: Caneta esferografica azul, escrita suave.\n\n");
+break;
+case 2:
+printf("Produto: Borracha\n");
+printf("Preco: R$ 1.00\n");
+printf("Especificacao: Borracha branca, apaga lapis sem manchas.\n\n");
+break;
+case 3:
+printf("Produto: Apontador\n");
+printf("Preco: R$ 1.75\n");
+printf("Especificacao: Apontador de plastico com deposito, cores variadas.\n\n");
+break;
+default:
+printf("Erro: Produto invalido.\n\n");
+break;
+}
+
+printf("Deseja selecionar outro produto (s,n): ");
+scanf("%s",&opcao);
+
+if(opcao=='s'){
+  goto refaz;
+}
+
+}
+___________________________________________________________________________________
