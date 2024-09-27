@@ -404,15 +404,19 @@ if(opcao=='s'){
 }
 ___________________________________________________________________________________
 Esquema de lançamento de dados
-
 #include <stdio.h>
 
 
 int main() {
+int valor;
+
+printf("Escreva o resultado desejado:");
+scanf("%d",&valor);
+
 for (int i = 1; i <= 6; i++) {
             for(int  j = 1; j<= 6; j++){
-                    if(i + j == 7){
-                     printf("%.2d + %.2d = 7 \n\n",i,j);}}}
+                    if(i + j == valor){
+                     printf("%.2d + %.2d = %.2d \n\n",i,j,valor);}}}
 
 return (0);
 }
