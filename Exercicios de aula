@@ -421,3 +421,68 @@ for (int i = 1; i <= 6; i++) {
 return (0);
 }
 _____________________________________________________________________________________
+Catalogo projeto
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+setlocale(LC_ALL, "Portuguese");
+int i;
+char opcao;
+
+
+printf("Bem vindo a Concessionaria tomaz turbano\n\n");
+refaz:
+
+do {
+printf("Catálogo de veículos \n\n");
+
+
+printf("Categorias:\n\n");
+
+printf("1. SUV\n");
+printf("2. Sedan\n");
+printf("3. Picape\n");
+printf("4. Hatch\n");
+scanf("%d", &i);
+
+
+if(i<1 || i>3){
+printf("Opção invalida!, Escolha uma das opções abaixo!\n\n");
+}}
+while(i<1 || i>4);
+
+switch (i) {
+case 1:
+    printf("1.Honda HRV 2022\n");
+    printf("2.Volkswagen Nivus 2021\n");
+break;
+
+case 2:
+    printf("1.Honda Civic 2014\n");
+    printf("2.Volkswagen Jetta 2018\n\n");
+break;
+
+case 3:
+    printf("1. Dodge Ram 2500 2019\n");
+break;
+
+case 4:
+    printf("1. Corsa 2002\n");
+break;
+
+default:
+printf("Erro: Produto invalido.\n\n");
+break;
+}
+
+printf("Deseja selecionar outro produto (s,n): \n\n");
+scanf("%s",&opcao);
+
+if(opcao=='s'){
+  goto refaz;
+}
+
+}
