@@ -431,9 +431,9 @@ int main() {
 setlocale(LC_ALL, "Portuguese");
 int i;
 char opcao;
+float valor_carro;
 
-
-printf("Bem vindo a Concessionaria tomaz turbano\n\n");
+printf("Bem vindo a Concessionaria Fastcar\n\n");
 refaz:
 
 do {
@@ -445,11 +445,13 @@ printf("Categorias:\n\n");
 printf("1. SUV\n");
 printf("2. Sedan\n");
 printf("3. Picape\n");
-printf("4. Hatch\n");
+printf("4. Hatch\n\n");
+
+printf("Selecione uma categoria: ");
 scanf("%d", &i);
 
 
-if(i<1 || i>3){
+if(i<1 || i>4){
 printf("Opção invalida!, Escolha uma das opções abaixo!\n\n");
 }}
 while(i<1 || i>4);
@@ -457,27 +459,42 @@ while(i<1 || i>4);
 switch (i) {
 case 1:
     printf("1.Honda HRV 2022\n");
-    printf("2.Volkswagen Nivus 2021\n");
+    printf("2.Volkswagen Nivus 2021\n\n");
+        printf("Selecione o veiculo: ");
+            scanf("%d", &i);
+                valor_carro = (i == 1) ? 60000 : 80000;
+                printf("Valor: %.2f reais\n\n",valor_carro); 
 break;
 
 case 2:
     printf("1.Honda Civic 2014\n");
     printf("2.Volkswagen Jetta 2018\n\n");
+        printf("Selecione o veiculo: ");
+            scanf("%d", &i);
+                valor_carro = (i == 1) ? 60000 : 80000;
+                printf("Valor: %.2f reais",valor_carro); 
+   
 break;
 
 case 3:
-    printf("1. Dodge Ram 2500 2019\n");
+    printf("1. Dodge Ram 2500 2019\n\n");
+    printf("Selecione o veiculo: ");
+        scanf("%d", &i);
+            valor_carro = (i == 1) ? 60000 : 80000;
+            printf("Valor: %.2f reais",valor_carro);
 break;
 
 case 4:
-    printf("1. Corsa 2002\n");
+    printf("1. Corsa 2002\n\n");
+    printf("Selecione o veiculo: ");
+        scanf("%d", &i);
+            valor_carro = (i == 1) ? 60000:10000;
+            printf("Valor: %.2f reais",valor_carro);
+   
 break;
 
 default:
 printf("Erro: Produto invalido.\n\n");
-break;
-}
-
 printf("Deseja selecionar outro produto (s,n): \n\n");
 scanf("%s",&opcao);
 
@@ -485,4 +502,47 @@ if(opcao=='s'){
   goto refaz;
 }
 
+break;
 }
+
+//Sessão de pagamentos
+
+do {
+printf("Método de pagamento \n\n");
+
+printf("1. À vista\n");
+printf("2. Parcelado com entrada\n");
+printf("3. Parcelado sem entrada\n");
+scanf("%d", &i);
+
+printf("Selecione uma método: ");
+scanf("%d", &i);
+
+
+if(i<1 || i>3){
+printf("Opção invalida!, Escolha uma das opções abaixo!\n\n");
+}}
+while(i<1 || i>3);
+
+switch (i) {
+case 1:
+  
+break;
+
+case 2:
+  
+   
+break;
+
+case 3:
+  
+break;
+
+case 4:
+  
+break;
+
+default:
+printf("Erro: método invalido.\n\n");
+printf("Deseja selecionar outro método (s,n): \n\n");
+scanf("%s",&opcao);
