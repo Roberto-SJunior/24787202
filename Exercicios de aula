@@ -426,123 +426,193 @@ Catalogo projeto
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <math.h>
 
-int main() {
-setlocale(LC_ALL, "Portuguese");
-int i;
-char opcao;
-float valor_carro;
+ int main() {
+    
+  setlocale(LC_ALL, "Portuguese");
+  
+  int i,parcelas; 
+  char opcao;
+  float preco_carro,entrada = 0.0, juros, valor_final, valor_parcela;
+  double km;
+    
 
-printf("Bem vindo a Concessionaria Fastcar\n\n");
-refaz:
+  printf("Bem vindo a Concessionaria Fastcar\n\n");
+  refaz:
 
-do {
-printf("Catálogo de veículos \n\n");
-
-
-printf("Categorias:\n\n");
-
-printf("1. SUV\n");
-printf("2. Sedan\n");
-printf("3. Picape\n");
-printf("4. Hatch\n\n");
-
-printf("Selecione uma categoria: ");
-scanf("%d", &i);
+  do {
+  printf("Catálogo de veículos \n\n");
 
 
-if(i<1 || i>4){
-printf("Opção invalida!, Escolha uma das opções abaixo!\n\n");
-}}
-while(i<1 || i>4);
+  printf("Categorias:\n\n");
 
-switch (i) {
-case 1:
-    printf("1.Honda HRV 2022\n");
-    printf("2.Volkswagen Nivus 2021\n\n");
+  printf("1. SUV\n");
+  printf("2. Sedan\n");
+  printf("3. Picape\n");
+  printf("4. Hatch\n\n");
+
+  printf("Selecione uma categoria: ");
+  scanf("%d", &i);
+
+  //Sessão das informações dos carros
+  
+  if(i<1 || i>4){
+  printf("Opção invalida!, Escolha uma das opções abaixo!\n\n");
+  }}
+  while(i<1 || i>4);
+
+  switch (i) {
+  case 1:
+    printf("\n1.Honda HRV 2022\n");
+    printf("\n2.Volkswagen Nivus 2021\n\n");
         printf("Selecione o veiculo: ");
             scanf("%d", &i);
-                valor_carro = (i == 1) ? 60000 : 80000;
-                printf("Valor: %.2f reais\n\n",valor_carro); 
-break;
+                preco_carro = (i>1||i>2) ? 143900 : 110900;
+                printf("\nInformações do Veículo\n\nValor: %.3f reais\n",preco_carro); 
+                km = (i==1) ? 52.150 : 57.881;
+                printf("Km : %.3lf rodados\n\n",km);
+   break;
 
-case 2:
-    printf("1.Honda Civic 2014\n");
+   case 2:
+    printf("\n1.Honda Civic 2014\n\n");
     printf("2.Volkswagen Jetta 2018\n\n");
         printf("Selecione o veiculo: ");
             scanf("%d", &i);
-                valor_carro = (i == 1) ? 60000 : 80000;
-                printf("Valor: %.2f reais",valor_carro); 
+                preco_carro = (i == 1) ? 70200 : 86790;
+                printf("\nInformações do Veículo\n\n Valor: %.3f reais\n",preco_carro); 
+                km = (i==1) ? 70.000 : 99.000;
+                printf("Km : %.3lf rodados\n\n",km);
    
-break;
+   break;
 
-case 3:
-    printf("1. Dodge Ram 2500 2019\n\n");
+   case 3:
+    printf("\n1. Dodge Ram 2500 2019\n\n");
+    printf("2. Toyota Hilux 2017\n\n");
     printf("Selecione o veiculo: ");
         scanf("%d", &i);
-            valor_carro = (i == 1) ? 60000 : 80000;
-            printf("Valor: %.2f reais",valor_carro);
-break;
+            preco_carro = (i == 1) ? 359900 : 159000;
+            printf("\nInformações do Veículo\n\nValor: %.3f reais\n",preco_carro);
+            km = (i==1) ? 48.000 : 41.000;
+            printf("Km : %.3lf rodados\n\n",km);
+   break;
 
-case 4:
-    printf("1. Corsa 2002\n\n");
+   case 4:
+    printf("\n1. Chevrolet Corsa 2002\n\n");
+    printf("2. Volkswagen Polo TSI GTS\n\n");
     printf("Selecione o veiculo: ");
         scanf("%d", &i);
-            valor_carro = (i == 1) ? 60000:10000;
-            printf("Valor: %.2f reais",valor_carro);
+            preco_carro = (i == 1) ? 15900 : 138900;
+            printf("\nInformações do Veículo\n\nValor: %.3f reais\n",preco_carro);
+            km = (i==1) ? 168.000 : 4.612;
+            printf("Km : %.3lf rodados\n\n",km);
    
-break;
+    break;
 
-default:
-printf("Erro: Produto invalido.\n\n");
-printf("Deseja selecionar outro produto (s,n): \n\n");
-scanf("%s",&opcao);
+    default:
+   printf("Erro: Produto invalido.\n\n");
+   printf("Deseja selecionar outro produto (s,n): \n\n");
+   scanf("%s",&opcao);
 
-if(opcao=='s'){
-  goto refaz;
-}
+   if(opcao=='s'){
+   goto refaz;
+   }
 
-break;
-}
-
-//Sessão de pagamentos
-
-do {
-printf("Método de pagamento \n\n");
-
-printf("1. À vista\n");
-printf("2. Parcelado com entrada\n");
-printf("3. Parcelado sem entrada\n");
-scanf("%d", &i);
-
-printf("Selecione uma método: ");
-scanf("%d", &i);
+   break;
+   }
 
 
-if(i<1 || i>3){
+    // Escolha do tipo de pagamento
+    
+    refaz1:
+    
+    do {
+    printf("Sessão de pagamentos\n\n");
+    
+    printf("1 - À vista\n");
+    printf("2 - Parcelado com entrada\n");
+    printf("3 - Parcelado sem entrada\n\n");
+    
+    printf("Escolha uma opção:");
+    scanf("%d", &i);
+    
+    if(i<1 || i>3){
 printf("Opção invalida!, Escolha uma das opções abaixo!\n\n");
 }}
 while(i<1 || i>3);
+    
 
-switch (i) {
-case 1:
+    switch (i) {
+        case 1:
+            printf("Total a ser pago à vista: R$ %.3f\n reais", preco_carro);
+            
+            
+            break;
+            
+            
+        case 2:
+            printf("Informe o valor da entrada: R$ ");
+            scanf("%f", &entrada);
+            
+            if(entrada>=preco_carro){
+                printf("Erro: A entrada deve ser menor que o valor do carro\n\n");
+                goto refaz1;
+            }
+
+            printf("Escolha o número de parcelas (12, 24, 36): ");
+            scanf("%d", &parcelas);
+            
+             if (preco_carro <= 70000) {
+            juros = 1.5; 
+            } 
+             else {
+            juros = 1.7; 
+            }
+
+           
+
+            valor_final = (preco_carro - entrada)*(1+(juros/100)*parcelas);
+            valor_parcela = (valor_final/parcelas);
+            
+            printf("Você escolheu pagar em %d parcelas com juros de %.1f%% ao mês.\n\n", parcelas, juros);
+            printf("Valor da entrada: R$ %.2f\n\n", entrada);
+            printf("Valor total financiado: R$ %.2f\n\n", preco_carro - entrada);
+            printf("Valor final a pagar: R$ %.2f\n\n", valor_final);
+            printf("Valor de cada parcela: R$ %.2f\n\n", valor_parcela);
+            
+            break;
+            
+            case 3:
+            
+            printf("Escolha o número de parcelas (12, 24, 36): ");
+            scanf("%d", &parcelas);
+            
+             if (preco_carro <= 70000) {
+            juros = 1.5; 
+            } 
+             else {
+            juros = 1.7; 
+            }
+
+           
+
+            valor_final = (preco_carro - entrada)*(1+(juros/100)*parcelas);
+            valor_parcela = (valor_final/parcelas);
+            
+            printf("Você escolheu pagar em %d parcelas com juros de %.1f%% ao mês.\n\n", parcelas, juros);
+            printf("Valor total financiado: R$ %.2f\n\n", preco_carro - entrada);
+            printf("Valor final a pagar: R$ %.2f\n\n", valor_final);
+            printf("Valor de cada parcela: R$ %.2f\n\n", valor_parcela);
+        
+            break;
   
-break;
-
-case 2:
   
-   
-break;
-
-case 3:
   
-break;
-
-case 4:
+  default:
+  printf("Erro: método invalido.\n\n");
+  printf("Deseja selecionar outro método (s,n): \n\n");
+  scanf("%s",&opcao);
   
-break;
-
-default:
-printf("Erro: método invalido.\n\n");
-printf("Deseja selecionar outro método (s,n): \n\n");
-scanf("%s",&opcao);
+  break;
+    }
+}
