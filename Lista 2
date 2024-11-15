@@ -26,3 +26,140 @@ return 0;
 
 2)
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+void monitorarnivel(){
+float comb=0;
+
+do{
+printf("\nDigite o nível do combustivel em percentual: ");
+scanf("%f",&comb);
+  
+if(comb<15){
+    printf("\nALERTA: Nivel baixo (%.1f) , por favor recarregue.\n", comb);
+}
+else if(comb<100){
+    printf("\nContinue monitorando: Nivel (%.1f)\n", comb);
+}
+else if(comb==100){
+    printf("\nCarga completa: Nivel (%.1f)\n", comb);
+}}
+while(comb<100);
+}
+
+int main()
+{
+setlocale(LC_ALL, "Portuguese");
+printf("Iniciando monitoramento de combustivel\n\n");
+monitorarnivel();
+return 0;
+}
+
+
+3)
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+void monitorarpassos(){
+int passos=0, ptotal=0;
+
+do{
+printf("\nDigite a quantidade de passos dados: ");
+scanf("%d",&passos);
+
+ptotal += passos;
+
+if(ptotal<10000){
+    printf("%d passos dados. Continue monitorando ...",ptotal);
+}
+
+if(ptotal==10000){
+    printf("Meta atingida, parabéns!");
+}}  
+
+while(ptotal<10000);
+}
+
+int main()
+{
+setlocale(LC_ALL, "Portuguese");
+printf("Iniciando monitoramento diário\nMeta Diaria : 10000 passos\n\n");
+monitorarpassos();
+return 0;
+}
+
+4) 
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+void monitorarvalor(){
+float valor=0;
+
+do{
+printf("\nDigite o valor de depósito inicial: ");
+scanf("%f",&valor);
+
+if(valor<500){
+    printf("\nErro: O valor do depósito deve ser no mínimo R$500,00\n");
+}
+
+else{
+    printf("\nDepósito de R$%.2f gerado! Conta acerta com sucesso.\n", valor);
+}}
+ while(valor<500);   
+}
+
+int main()
+{
+setlocale(LC_ALL, "Portuguese");
+printf("Iniciando processo de abertura de conta\nValor mínimo de depósito: R$500,00\n");
+monitorarvalor();
+return 0;
+}
+
+5) 
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int x = 0, y = 0; 
+    char comando[10];  
+
+    printf("Bem-vindo ao controle do robô!\n");
+    printf("O espaço de movimento é de 10x10 metros (de -5 a 5 em ambos os eixos).\n");
+    printf("Comandos disponíveis: frente, tras, esquerda, direita, sair.\n");
+
+    while (1) {
+        printf("\nPosição atual do robô: (%d, %d)\n", x, y);
+        printf("Digite um comando: ");
+        scanf("%s", comando);
+
+        if (strcmp(comando, "sair") == 0) {
+            printf("Encerrando o controle do robô. Posição final: (%d, %d)\n", x, y);
+            break;
+        } else if (strcmp(comando, "frente") == 0) {
+            if (y < 5) y++;
+            else printf("Movimento inválido: o robô atingiu o limite superior.\n");
+        } else if (strcmp(comando, "tras") == 0) {
+            if (y > -5) y--;
+            else printf("Movimento inválido: o robô atingiu o limite inferior.\n");
+        } else if (strcmp(comando, "esquerda") == 0) {
+            if (x > -5) x--;
+            else printf("Movimento inválido: o robô atingiu o limite esquerdo.\n");
+        } else if (strcmp(comando, "direita") == 0) {
+            if (x < 5) x++;
+            else printf("Movimento inválido: o robô atingiu o limite direito.\n");
+        } else {
+            printf("Comando inválido. Tente novamente.\n");
+        }
+    }
+
+    return 0;
+}
+
+
+
