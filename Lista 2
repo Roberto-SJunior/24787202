@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+printf("Iniciando monitoramento de combustivel\n\n");
+monitorarTemperatura();
+return 0;
+}
+
+void monitorarTemperatura(){
+float comb=0;
+while(1){
+    
+  printf("\nDigite o nivel do tanque (em percentual): ");
+  scanf("%f",&comb);
+  
+  if(com<15){
+      printf("ALERTA:  : %.2fºC", temperatura);
+  }
+  else{
+      printf("Temperatura dentro da faixa de seguranção : %.2fºC", temperatura);
+  }
+}
+}
+
+2)
+
