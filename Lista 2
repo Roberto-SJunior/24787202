@@ -161,5 +161,44 @@ int main() {
     return 0;
 }
 
+6)
+
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+
+int main() {
+    #include <locale.h>
+    float distancia; 
+    char opcao;  
+    setlocale(LC_ALL, "Portuguese");
+    
+    printf("Bem-vindo ao sistema de leitura de sensores de distância!\n");
+    printf("O programa encerra automaticamente se uma distância menor que 10 cm for registrada.\n");
+    printf("Digite 'n' para parar manualmente a leitura.\n");
+
+    do {
+        printf("\nIniciando leitura do sensor...\n");
+       refaz:
+        printf("Digite a distância medida (em cm): ");
+        scanf("%f", &distancia);
+        
+        printf("Distância medida: %.2f cm\n", distancia);
+
+        if (distancia < 10.0) {
+            printf("Distância menor que 10 cm detectada.\n");
+            break;}
+            
+        printf("\nDeseja continuar a leitura? (s para sim, n para não): ");
+        scanf(" %c", &opcao);   
+            
+        
+    } 
+   while (opcao == 's' || opcao == 'S');
+   
+   printf("\nLeitura finallizada");
+   
+    return 0;
+}
 
 
