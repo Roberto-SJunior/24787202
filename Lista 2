@@ -201,4 +201,62 @@ int main() {
     return 0;
 }
 
+7)
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+setlocale(LC_ALL, "Portuguese");
+int i;
+char opcao;
+refaz:
+printf("Bem vindo ao controle de atuações do robõ\n");
+
+//MENU
+do {
+printf("\nMenu de ações:\n\n");
+printf("1. Ligar a lampada\n");
+printf("2. Tocar um som\n");
+printf("3. Mover um braço\n");
+printf("4. Encerrar o programa\n");
+printf("\nEscolha uma das opções:");
+scanf("%d", &i);
+
+if(i<1 || i>4){
+printf("\nOpção invalida!, Escolha uma das opções abaixo!\n\n");
+}}
+while(i<1 || i>4);
+
+switch (i) {
+case 1:
+printf("\nAção concluida: Ligar a lampada \n");
+
+break;
+case 2:
+printf("\nAção concluida: Tocar um som\n");
+
+break;
+case 3:
+printf("\nAção concluida: Mover um braço\n");
+
+break;
+case 4:
+printf("\nProcesso finalizado\n");
+
+break;
+default:
+printf("\nErro: ação invalida.\n\n");
+break;
+}
+
+printf("\nDeseja reniciar (s,n): ");
+scanf("%s",&opcao);
+
+if(opcao=='s'){
+  goto refaz;
+}
+
+}
 
