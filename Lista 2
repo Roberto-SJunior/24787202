@@ -1,3 +1,6 @@
+Exercicio 1:
+
+1)
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -120,18 +123,23 @@ printf("Iniciando processo de abertura de conta\nValor mínimo de depósito: R$5
 monitorarvalor();
 return 0;
 }
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-5) 
+Exercicio 2:
+
+1) 
 #include <stdio.h>
 #include <string.h>
+#include <locale.h>
 
 int main() {
     int x = 0, y = 0; 
     char comando[10];  
 
     printf("Bem-vindo ao controle do robô!\n");
-    printf("O espaço de movimento é de 10x10 metros (de -5 a 5 em ambos os eixos).\n");
+    printf("O espaço de movimento é de 10x10 metros.\n");
     printf("Comandos disponíveis: frente, tras, esquerda, direita, sair.\n");
+    setlocale(LC_ALL, "Portuguese");
 
     while (1) {
         printf("\nPosição atual do robô: (%d, %d)\n", x, y);
@@ -142,16 +150,16 @@ int main() {
             printf("Encerrando o controle do robô. Posição final: (%d, %d)\n", x, y);
             break;
         } else if (strcmp(comando, "frente") == 0) {
-            if (y < 5) y++;
+            if (y < 10) y++;
             else printf("Movimento inválido: o robô atingiu o limite superior.\n");
         } else if (strcmp(comando, "tras") == 0) {
-            if (y > -5) y--;
+            if (y > -10) y--;
             else printf("Movimento inválido: o robô atingiu o limite inferior.\n");
         } else if (strcmp(comando, "esquerda") == 0) {
-            if (x > -5) x--;
+            if (x > -10) x--;
             else printf("Movimento inválido: o robô atingiu o limite esquerdo.\n");
         } else if (strcmp(comando, "direita") == 0) {
-            if (x < 5) x++;
+            if (x < 10) x++;
             else printf("Movimento inválido: o robô atingiu o limite direito.\n");
         } else {
             printf("Comando inválido. Tente novamente.\n");
@@ -161,7 +169,7 @@ int main() {
     return 0;
 }
 
-6)
+2)
 
 #include <stdio.h>
 #include <string.h>
@@ -201,7 +209,7 @@ int main() {
     return 0;
 }
 
-7)
+3)
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -257,6 +265,155 @@ scanf("%s",&opcao);
 if(opcao=='s'){
   goto refaz;
 }
+
+}
+
+4)
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+void monitorarbateria(){
+float bat=0;
+
+do{
+printf("\nDigite o nivel de bateria : ");
+scanf("%f",&bat);
+  
+if(bat<=20){
+    printf("\nALERTA: Nivel baixo (%.1f) , por favor recarregue.\n", bat);
+}
+else {
+    printf("\nNivel de Bateria: (%.1f).\n", bat);  
+
+}}
+
+while(bat<100);
+}
+
+int main()
+{
+setlocale(LC_ALL, "Portuguese");
+printf("Iniciando monitoramento de bateria\n");
+monitorarbateria();
+return 0;
+}
+
+5) 
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+
+int main() {
+    int x = 0, y = 0; 
+    char comando[10];  
+    setlocale(LC_ALL, "Portuguese");
+    printf("Bem-vindo ao controle do robô!\n");
+    printf("O espaço de movimento é de 5x5 metros.\n");
+    printf("Comandos disponíveis: frente, tras, esquerda, direita, sair.\n");
+
+    while (1) {
+        printf("\nPosição atual do robô: (%d, %d)\n", x, y);
+        printf("Digite um comando: ");
+        scanf("%s", comando);
+
+        if (strcmp(comando, "sair") == 0) {
+            printf("Encerrando o controle do robô. Posição final: (%d, %d)\n", x, y);
+            break;
+        } else if (strcmp(comando, "cima") == 0) {
+            if (y < 5) y++;
+            else printf("Movimento inválido: o robô atingiu o limite superior.\n");
+        } else if (strcmp(comando, "baixo") == 0) {
+            if (y > -5) y--;
+            else printf("Movimento inválido: o robô atingiu o limite inferior.\n");
+        } else if (strcmp(comando, "esquerda") == 0) {
+            if (x > -5) x--;
+            else printf("Movimento inválido: o robô atingiu o limite esquerdo.\n");
+        } else if (strcmp(comando, "direita") == 0) {
+            if (x < 5) x++;
+            else printf("Movimento inválido: o robô atingiu o limite direito.\n");
+        } else {
+            printf("Comando inválido. Tente novamente.\n");
+        }
+    }
+
+    return 0;
+}
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Exercicio 3:
+
+1) int cameraData[10];
+
+2) Significa que o quarto elemento do vetor "cameraData", recebe um valor de uma leitura analógica da porta A1 do arduino.
+
+3)float temperaturas[5] = {25.5,26.0,24.8,27.3,26.5};
+
+4) O código em questão selecione o vetor de 4 elementos (ledPins) pelo comando for como "i", e mostra os mesmos no serial do arduino.
+
+5)
+int ledPins[4] = {2,3,4,5};
+
+
+void setup(){
+Serial.begin(9600);
+
+}
+
+void loop(){
+int i;
+for ( int i = 0; i < 4; i ++){
+Serial.println(ledPins[i]);}
+delay(1000);
+} 
+
+6)
+int randomValues[5];  
+
+void setup() {
+  Serial.begin(9600);  
+
+  for (int i = 0; i < 5; i++) {
+    randomValues[i] = random(0, 101);  
+  }
+
+7)O código apresenta um for que percorre os elementos do vetor "sensorReadings" até a tamanho do vetor "tamanhoVetor". Se o elemento ser igual a 150, o comando break interrompe a função de loop imediatamente.
+
+8) O comando sizeof(sensorData), retorna o tamanho total em bytes do vetor "sensorData", de acordo com o tipo de dados.
+O comanddo sizeof(sensorData[0]), retorna o tamanho total em bytes do primeiro elemento do vetor (indice 0).
+Deste modo, o código sizeof(sensorData) / sizeof(sensorData[0]) divide o tamanho do vetor pelo tamanho de um unico elemento, resultando no numero total de elementos.
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Exercicio 4 - Problemas:
+
+a) Analisando os valores {22 , 25 , 23 , 21 , 24} , podemos chegar a conclusão que a temperatura vario de 21º a 25º nos 5 momentos.
+
+b) A média de {45 , 38 , 42 , 40 , 37} é 40,40%.
+
+c) O valor máximo é 420 ppm, que ocorreu no terceiro momento.
+
+d)
+int totalLocais = 3;
+int totalLeituras = 5;
+int somaTemperaturas = 0;
+int ambientData [3][5] = {
+2 {22 , 25 , 23 , 21 , 24} ,
+3 {45 , 38 , 42 , 40 , 37} ,
+4 {400 , 380 , 420 , 410 , 390}
+5 };
+
+void setup() {
+  Serial.begin(9600);
+
+for (int i = 0; i < totalLocais; i++) {
+  somaTemperaturas = 0; 
+    for (int j = 0; j < totalLeituras; j++) {
+      somaTemperaturas += ambientData[i][j];
+}}
+
+float mediaTemperatura = somaTemperaturas / totalLeituras;}
+
+void loop(){
 
 }
 
